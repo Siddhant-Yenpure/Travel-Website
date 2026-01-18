@@ -1,0 +1,62 @@
+[
+    {
+      "title": "Shibuya Crossing",
+      "image": "shibuya crossing.jpg",
+      "id": "1"
+
+    },
+    {
+      "title": "Kinkaku-ji",
+      "image": "kyoto.jpeg",
+      "id": "2"
+
+    },
+    {
+      "title": "Osaka Castle",
+      "image": "osaka.jpg",
+      "id": "3"
+
+    },
+    {
+      "title": "Peace Memorial Park",
+      "image": "hiroshima.jpg",
+      "id": "4"
+
+    },
+    {
+      "title": "Sapporo Snow Festival",
+      "image": "sapparo.jpeg",
+      "id": "5"
+
+    },
+    {
+      "title": "Kobe Harborland",
+      "image": "kobe.jpeg",
+      "id": "6"
+
+    },
+    {
+      "title": "Himeji Castle",
+      "image": "himeji.jpg",
+      "id": "7"
+
+    },
+    {
+      "title": "Hakone Hot Springs",
+      "image": "hakone.jpg",
+      "id": "8"
+
+    },
+    {
+      "title": "Tokyo Skytree",
+      "image": "tokyo.jpg",
+      "id": "9"
+
+    },
+    {
+      "title": "Odaiba",
+      "image": "odaiba.jpg",
+      "id": "10"
+
+    }
+  ]

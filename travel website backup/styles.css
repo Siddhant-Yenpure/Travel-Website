@@ -1,0 +1,573 @@
+:root {
+    --primary-color: #C8102E; /* Crimson Red */
+    --secondary-color: #212121; /* Pearl White */
+    --bg-color: #F5F5F5; /* Light Gray Background for a Classy Look */
+    --text-color: #333; /* Darker Gray for Text */
+    --highlight-color: #A60026; /* Darker Crimson Red */
+    --accent-color: #4A773C; /* Zen Garden Green */
+}
+
+.parallax {
+    /* The image used */
+    background: url('travel.jpg') no-repeat center center;
+  
+    /* Set a specific height */
+    min-height: 650px; 
+    width: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.icon {
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: var(--highlight-color); /* Darker Crimson Red Hover */
+    transform: scale(1.02);
+}
+
+
+.navbar-nav .nav-link, .navbar-brand  {
+    font-size: 21px;
+    color: black !important;
+    margin-right: 50px;
+
+
+}
+
+.navbar-nav .nav-link:hover, .navbar-brand .logo:hover {
+    color: crimson !important;
+}
+
+
+.menu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu li:hover .dropdown-content {
+    display: block;
+}
+
+.menu .dropdown-content p {
+    margin: 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search .srch {
+    padding: 3px 10px;
+    font-size: 12px;
+}
+
+.search .btn {
+    padding: 3px 10px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Times New Roman', serif;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search .btn:hover {
+    background-color: var(--highlight-color); /* Darker Crimson Red Hover */
+}
+
+.hero {
+    background: url('vid.mp4') no-repeat center center;
+    background-size: cover;
+    height: 350px;;
+    color: white; /* Crimson Red */
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.section {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 40px;
+}
+
+.text-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.image-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    filter: sepia(25%);
+    position: relative;
+}
+
+
+
+.pin {
+    background: #4362f8;
+    position: absolute;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+}
+
+    .pin::before {
+        content: '';
+        background: #012cff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation:
+        pulse 1.3s ease-in-out infinite;
+        }
+        .pin span {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            left: 0.5 em;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            border-radius: 3em;
+            padding: 0.3em 0.6em;
+            font-size: 0.9em;
+            opacity: 0;
+
+            }
+        .pin span:hover
+        {opacity: 1;
+        }
+        
+        .shibuya {
+            top: 68%;
+            left: 62%;
+        }
+        
+        .kyoto {
+            top: 67%;
+            left: 46%;
+        }
+        
+        .osaka {
+            top: 71%;
+            left: 48%;
+        }
+        
+        .hiroshima {
+            top: 69%;
+            left: 36.5%;
+        }
+        
+        .sapparo {
+            top: 22%;
+            left: 66%;
+        }
+        
+        /* Additional breakpoints for finer control */
+        @media (max-width: 800px) {
+            .shibuya { top: 66.5%; left: 65%; }
+            .kyoto { top: 66.5%; left: 46.5%; }
+            .osaka { top: 69.5%; left: 48.5%; }
+            .hiroshima { top: 68.5%; left: 37%; }
+            .sapparo { top: 21.5%; left: 66.5%; }
+        }
+        
+        @media (max-width: 750px) {
+            .shibuya { top: 66%; left: 64%; }
+            .kyoto { top: 66%; left: 47%; }
+            .osaka { top: 69%; left: 49%; }
+            .hiroshima { top: 68%; left: 37.5%; }
+            .sapparo { top: 21%; left: 67%; }
+        }
+        
+        @media (max-width: 700px) {
+            .shibuya { top: 65.5%; left: 64.5%; }
+            .kyoto { top: 65.5%; left: 47.5%; }
+            .osaka { top: 68.5%; left: 49.5%; }
+            .hiroshima { top: 67.5%; left: 38%; }
+            .sapparo { top: 20.5%; left: 67.5%; }
+        }
+        
+        @media (max-width: 650px) {
+            .shibuya { top: 65%; left: 65%; }
+            .kyoto { top: 65%; left: 48%; }
+            .osaka { top: 68%; left: 50%; }
+            .hiroshima { top: 67%; left: 38.5%; }
+            .sapparo { top: 20%; left: 68%; }
+        }
+        
+        @media (max-width: 600px) {
+            .shibuya { top: 64.5%; left: 64.5%; }
+            .kyoto { top: 64.5%; left: 48.5%; }
+            .osaka { top: 67.5%; left: 50.5%; }
+            .hiroshima { top: 66.5%; left: 39%; }
+            .sapparo { top: 19.5%; left: 68.5%; }
+        }
+        
+        @media (max-width: 550px) {
+            .shibuya { top: 64%; left: 65%; }
+            .kyoto { top: 64%; left: 49%; }
+            .osaka { top: 67%; left: 51%; }
+            .hiroshima { top: 66%; left: 39.5%; }
+            .sapparo { top: 19%; left: 69%; }
+        }
+        
+        @media (max-width: 500px) {
+            .shibuya { top: 63.5%; left: 65.5%; }
+            .kyoto { top: 63.5%; left: 49.5%; }
+            .osaka { top: 66.5%; left: 51.5%; }
+            .hiroshima { top: 65.5%; left: 40%; }
+            .sapparo { top: 18.5%; left: 69.5%; }
+        }
+        
+        @media (max-width: 470px) {
+            .shibuya { top: 63%; left: 66%; }
+            .kyoto { top: 63%; left: 50%; }
+            .osaka { top: 66%; left: 52%; }
+            .hiroshima { top: 65%; left: 40.5%; }
+            .sapparo { top: 18%; left: 70%; }
+        }
+        
+        @media (max-width: 440px) {
+            .shibuya { top: 62.5%; left: 66.5%; }
+            .kyoto { top: 62.5%; left: 50.5%; }
+            .osaka { top: 65.5%; left: 52.5%; }
+            .hiroshima { top: 64.5%; left: 41%; }
+            .sapparo { top: 17.5%; left: 70.5%; }
+        }
+        
+        @media (max-width: 420px) {
+            .shibuya { top: 62%; left: 67%; }
+            .kyoto { top: 62%; left: 51%; }
+            .osaka { top: 65%; left: 53%; }
+            .hiroshima { top: 64%; left: 41.5%; }
+            .sapparo { top: 17%; left: 71%; }
+        }
+        
+        @media (max-width: 390px) {
+            .shibuya { top: 61.5%; left: 67.5%; }
+            .kyoto { top: 61.5%; left: 51.5%; }
+            .osaka { top: 64.5%; left: 53.5%; }
+            .hiroshima { top: 63.5%; left: 42%; }
+            .sapparo { top: 16.5%; left: 71.5%; }
+        }
+        
+        @media (max-width: 360px) {
+            .shibuya { top: 61%; left: 68%; }
+            .kyoto { top: 61%; left: 52%; }
+            .osaka { top: 64%; left: 54%; }
+            .hiroshima { top: 63%; left: 42.5%; }
+            .sapparo { top: 16%; left: 72%; }
+        }
+        
+        @media (max-width: 330px) {
+            .shibuya { top: 60.5%; left: 68.5%; }
+            .kyoto { top: 60.5%; left: 52.5%; }
+            .osaka { top: 63.5%; left: 54.5%; }
+            .hiroshima { top: 62.5%; left: 43%; }
+            .sapparo { top: 15.5%; left: 72.5%; }
+        }
+        
+        @media (max-width: 300px) {
+            .shibuya { top: 60%; left: 69%; }
+            .kyoto { top: 60%; left: 53%; }
+            .osaka { top: 63%; left: 55%; }
+            .hiroshima { top: 62%; left: 43.5%; }
+            .sapparo { top: 15%; left: 73%; }
+        }
+        
+        @media (max-width: 280px) {
+            .shibuya { top: 59.5%; left: 69.5%; }
+            .kyoto { top: 59.5%; left: 53.5%; }
+            .osaka { top: 62.5%; left: 55.5%; }
+            .hiroshima { top: 61.5%; left: 44%; }
+            .sapparo { top: 14.5%; left: 73.5%; }
+        }
+        
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--primary-color); /* Crimson Red */
+    border-radius: 10px;
+
+}
+@media (max-width: 768px) {
+    .image-section img {
+        height: auto; 
+        width: auto;
+    }}
+
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--bg-color);
+}
+
+.table th, .table td {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Gallery Styles */
+.gallery {
+
+    display:table;
+    gap: 20px;
+    width: 1100px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px; /* Space below gallery */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    max-height: 280px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    filter:brightness(75%);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
+.news-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: 300px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary-color); /* Crimson Red */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-text {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', serif;
+}
+
+.contact-form {
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact-form h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--primary-color); /* Crimson Red */
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--highlight-color); /* Darker Crimson Red */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+}
+
+

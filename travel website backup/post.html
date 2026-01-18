@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+   
+    </script>
+    <style>
+        /* Color Variables */
+        :root {
+            --primary-color: #C8102E; /* Crimson Red */
+            --secondary-color: #212121; /* Pearl White */
+            --bg-color: #F5F5F5; /* Light Gray Background for a Classy Look */
+            --text-color: #333; /* Darker Gray for Text */
+            --highlight-color: #A60026; /* Darker Crimson Red */
+            --accent-color: #4A773C; /* Zen Garden Green */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .icon {
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    color: var(--highlight-color); /* Darker Crimson Red Hover */
+    transform: scale(1.02);
+}
+        .navbar-nav .nav-link, .navbar-brand  {
+    font-size: 21px;
+    color: black !important;
+    margin-right: 50px;
+
+
+}
+
+.navbar-nav .nav-link:hover, .navbar-brand .logo:hover {
+    color: crimson !important;
+}
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+       
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+        }
+
+        #post-content {
+    background-color: #fff; /* White background for contrast */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 30px; /* Space above the post content */
+}
+
+#post-content h1 {
+    color: var(--primary-color); /* Use your primary color */
+    font-size: 2.5em; /* Larger font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+#post-content img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add space below it */
+    width: 70%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+
+#post-content p {
+    line-height: 1.6; /* Improved line height for readability */
+    font-size: 1.1em; /* Slightly larger font size for better readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: var(--text-color); /* Use your defined text color */
+}
+
+#post-content strong {
+    font-weight: bold; /* Bold for emphasis */
+    color: var(--accent-color); /* Use your accent color for emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #post-content h1 {
+        font-size: 2em; /* Slightly smaller title on mobile */
+    }
+
+    #post-content p {
+        font-size: 1em; /* Adjust paragraph size on mobile */
+    }
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .info-card img {
+                height: auto; /* Adjust image height for smaller screens */
+            }
+
+            .back-link {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+
+    </style>
+</head>
+<div class="main">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand icon" href="main.php">
+                    <h2 class="logo text-shadow">XPLORE</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="main.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="main.php#destinations">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">Travel Tips</a>
+                        </li>
+                        <li class="nav-item"></li>
+                            <a class="nav-link" aria-current="page" href="blog.php">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#contactform">About Us</a></li>
+                                <li><a class="dropdown-item" href="#contactform">Contact Us</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2 srch" type="search" placeholder="Search destinations" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <div id="post-content">
+                <!-- Blog post content will be injected here -->
+            </div>
+            <a href="blog.php" class="back-link">Back to Blogs</a>
+        </div>
+
+        </div>
+    <div class="section"  id="news">
+        <h2 class="section-title">Latest News</h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <img src="fuji.jpg" alt="News Image 1" class="news-image">
+                <p class="news-text">Discover the top hidden travel gems in Japan for 2024.</p>
+            </div>
+            <div class="news-item">
+                <img src="cherry blossom.jpeg" alt="News Image 2" class="news-image">
+                <p class="news-text">Explore Japan's cherry blossom season highlights and best viewing spots.</p>
+            </div>
+            <div class="news-item">
+                <img src="hot springs.jpeg" alt="News Image 3" class="news-image">
+                <p class="news-text">Guide to Japan's most picturesque onsen (hot springs) for relaxation and rejuvenation.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="contact-form" id="contactform">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>By using our Website, you agree to abide by our terms and conditions. For more details, please review our full Terms and Conditions.</p>
+        <p>&copy; 2024 Plane Showcase. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    $(document).ready(function() {
+    // Function to get the 'id' from the URL
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    var postId = getUrlParameter('id'); // Get the post ID from the URL
+
+    if (postId) {
+        // Make an AJAX request to get the specific post data
+        $.ajax({
+            url: 'fill.php', // Fetch data from the server-side script
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Find the specific post by ID
+                let blog = data.find(post => post.id == postId);
+
+                if (blog) {
+                    // Build the blog post HTML
+                    let postHTML = `
+                        <h1>${blog.title}</h1>
+                        <img src="${blog.image}" alt="${blog.title}" onerror="this.onerror=null; this.src='path/to/default/image.png';" class="img-fluid">
+                        <p><strong>By ${blog.author} on ${blog.date}</strong></p>
+                        <p>${blog.content}</p>
+                    `;
+                    $('#post-content').html(postHTML); // Insert the content into the page
+                } else {
+                    $('#post-content').html('<p>Blog post not found.</p>');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("Error fetching post data: " + error);
+            }
+        });
+    } else {
+        $('#post-content').html('<p>No post selected.</p>'); // If no post ID is found in the URL
+    }
+});
+
+</script>
+
+</body>
+</html>
+
+   
+
